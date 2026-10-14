@@ -1,0 +1,15 @@
+image: gitpod/workspace-node-lts
+
+tasks:
+  - name: Cloudflare Agent setup
+    init: |
+      chmod +x ./install_cloudflare_agent_for_copilot.sh
+      chmod +x ./install_cloudflare_agent_claude.sh
+      chmod +x ./install_cloudflare_agent_codex.sh
+      chmod +x ./install_cloudflare_agent_opencode.sh
+      ./install_cloudflare_agent_for_copilot.sh
+    command: |
+      echo "Cloudflare Agent setup is complete or the script has printed manual follow-up steps."
+      echo "Review README.md for additional instructions and troubleshooting."
+
+ports: []
